@@ -24,24 +24,24 @@ var escolhaJogador;
 
 //audio
 
-const tema = new Audio("./sound/somjogo.mpeg");
+const tema = new Audio("./somjogo.mpeg");
 
 const afrodite1 = {
   foto: document.getElementById("afrodite"),
   Hp2:100,
   voz:{
-  audio1: new Audio("./sound/rosasdiabolicasreais.mpeg"),
-  audio2: new Audio("./sound/rosabranca.mpeg"),
-  audio3: new Audio("./sound/rosaspiranhas.mpeg"),
+  audio1: new Audio("./rosasdiabolicasreais.mpeg"),
+  audio2: new Audio("./rosabranca.mpeg"),
+  audio3: new Audio("./rosaspiranhas.mpeg"),
 }
 };
 const camus1 = {
   foto: document.getElementById("camus"),
   Hp1:100,
   voz:{  
-  audio1: new Audio("./sound/podiamante.mpeg"),
-  audio2: new Audio("./sound/aurora.mpeg"),
-  audio3: new Audio("./sound/Esquife.mpeg"),}
+  audio1: new Audio("./podiamante.mpeg"),
+  audio2: new Audio("./aurora.mpeg"),
+  audio3: new Audio("./Esquife.mpeg"),}
 
 
 
@@ -117,8 +117,8 @@ function jogar() {
       afrodite1.foto.src = "afrodite.jpg";
       camus1.foto.style.transform = "scale(1)";
       document.querySelector(".danogelo").style.display = "none";
-      document.getElementById("duvida").src="./img/pandorabox.png"
-      document.getElementById("duvida-reverso").src="./img/pandorabox.png"
+      document.getElementById("duvida").src="./pandorabox.png"
+      document.getElementById("duvida-reverso").src="./pandorabox.png"
     }, 2800);
   } else {
     if (sorteio == 0) {
@@ -154,8 +154,8 @@ function jogar() {
       afrodite1.foto.style.width = "200px";
       afrodite1.foto.style.transform = "scale(1)";
       document.querySelector(".danorosa").style.display = "none";
-      document.getElementById("duvida-reverso").src="./img/pandorabox.png"
-      document.getElementById("duvida").src="./img/pandorabox.png"
+      document.getElementById("duvida-reverso").src="./pandorabox.png"
+      document.getElementById("duvida").src="./pandorabox.png"
     }, 3000);
     afrodite1.foto.style.width = "200px";
     afrodite1.foto.style.height = "250px";
