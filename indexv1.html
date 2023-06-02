@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Jokenpô - Saint Seiya</title>
+  </head>
+  <body>
+    <header>
+      <h2>Jokenpô - Saint Seiya</h2>
+    </header>
+    <section>
+      <div id="personagens">
+        <img id="camus" src="./camus.jpg" alt="" />
+        <img id="afrodite" src="./afrodite.jpg" alt="" />
+    </div>
+       <div id="barralife">
+          <div class="hpt-1"></div>
+          <div class="hpt-2"></div>       
+       </div>
+      <div id="game">
+        <div id="jogador">
+          <form id="icon" name="formjokenpo">
+            <button id="pedra">
+                <img class="escolha" src="./pedra.png" alt="" /> Pedra 
+            </button>
+            <button id="tesoura">
+                <img class="escolha" src="./tesoura.png" alt="" /> Tesoura 
+            </button>
+            <button id="papel">
+                <img class="escolha" src="./papel.png" alt="" /> Papel
+            </button>
+          </form>
+          <div id="computador">
+            <div id="res-jogador">...</div>
+            <div id="display">
+              <img src="vs-41922.png" width="180px" alt="" id="duvida" />
+            </div>
+            <div id="res-pc">
+                <img src="" alt="">
+            </div>
+          </div>
+          <div id="placar">...</div>
+          <p id="botao-jogo">
+            <input class="btn" type="button" value="Jogar" onclick="jogar()" />
+            <input class="btn" type="reset" value="Resetar" onclick="reset()" />
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

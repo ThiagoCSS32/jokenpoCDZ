@@ -1,51 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Jokenpô - Saint Seiya</title>
-</head>
-<body>
-    <header>
-        <h2>Jokenpô - Saint Seiya</h2>
-    </header>
-    <section>
-    <div id="personagens">     
-        <img id="camus"src="./camus.jpg" alt="">
-        <img id="afrodite"src="./afrodite.jpg" alt="">
-        <div id="barralife">
-            <div class="hpt-1"></div>
-            <div class="hpt-2"></div>
+  </head>
+  <body>
+    <section class="jogoCdz">
+      <div id="personagens">
+        <div class="efeitodano none1">
+          <img id="camus" src="./camus.jpg" alt="" />
+          <img class="danorosa" src="rosas.gif" alt="">
         </div>
-       
-    </div>
-    <div id="game">
-        <h5 id="player1">Jogador:</h5>
+        <div class="efeitodano2 none2"> 
+          <img id="afrodite" src="./afrodite.jpg" alt="" />
+          <img class="danogelo"src="nevegif.gif" alt="">
+        </div>
+      </div>
+      <div id="barralife">
+        <div class="hpt-1"></div>
+        <div class="hpt-2"></div>
+      </div>
+      <div id="game">
         <div id="jogador">
-        <img class="escolha"src="./pedra.png" alt="">
-        <img class="escolha"src="./papel.png" alt="">
-        <img class="escolha"src="./tesoura.png" alt="">
-        <form id="icon" name="formjokenpo">
-            <input id="pedra" name="escolhas"type="radio"> Pedra
-            <input id="papel" name="escolhas"type="radio"> Papel
-            <input id="tesoura" name="escolhas"type="radio"> Tesoura   
-        </form>
-        <div id="computador">
-            <div id="display">
-                <img src="interro.jpg" width = "180px"alt="" id="duvida">
+          <div class="botoes-escolha">
+            <button class="btn1" onclick = "escolha('pedra')">
+              <img class="escolha" src="./pedra.png"   />
+            </button> 
+       
+            <button class="btn1" onclick = "escolha('papel')">
+              <img class="escolha" src="./papel.png"  />
+            </button>
+            
+            <button class="btn1" onclick = "escolha('tesoura')">
+              <img class="escolha" src="./tesoura.png"   />
+            </button>
+          </div>
+          <div id="computador">
+            <div id="display"  class="select-image" >
+              <div class="user">
+                <img src="./img/pandorabox.png " id="duvida-reverso" width="500px" />
+              </div>
+              <div class="vs">
+                <img src="versus.png" alt="versus">
+              </div>
+              <div class="pc">
+                <img src="./img/pandorabox.png" id="duvida" width="500px" />
+              </div>  
             </div>
-            <div id="placar">...</div>
+            <div id="placar" class="none">...</div>
+          </div>
+          <div class="comando"></div>
+          <p id="botao-jogo">
+            <input class="btn" type="button" value="Lutem!" onclick="jogar()" />
+            <input class="btn" type="reset" value="Resetar" onclick="reset()" />
+          </p>
         </div>
-        <p id="botao-jogo">
-            <input class ="btn" type="button" value="Jogar" onclick="jogar()">
-            <input class= "btn" type="reset" value="Resetar" onclick="reset()">
-        </p>
-        
-        </div>
-    </div>
+      </div>
     </section>
+    <div class="jogoCdz inicio-jogo">
+      <div class="titulo">
+        <img src="cdzlogo.png"  alt="logo">
+        <span class="title">Herói Dourado!</span>
+        <p id="end"><h6>&copy;2023 Thiago Sant'Ana - Projeto fã game. Todos os direitos reservados a Toei Animation Co., Ltd..</h6> </p>
+      </div>
+      <button class="comecar">Jogar</button>     
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

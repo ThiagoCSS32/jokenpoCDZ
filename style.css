@@ -2,54 +2,135 @@
     margin: 0px;
     padding: 0px;
     font-family: helvetica;
+    box-sizing: border-box;
 }
-
-header{
-margin: 15px 750px;
-color: greenyellow;
-font-weight: 300;
-font-family: Helvetica;
-}
-
 
 body{
 background-image: linear-gradient(45deg, #85bb8e, #10367e, #000000);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+width: 100%;
+position: relative;
+}
+
+label{
+    position: relative;
 }
 input[type="text"]{
-    width: 50px;
-    height: 50px;
+/*telas do jogo*/
 }
 section{
+    position: relative;
+    margin: 10px;
     padding: 35px;
-    border: 2px solid rgb(0, 113, 128);
+    border: 7px solid rgb(128, 98, 0);
     border-radius: 35px;
-    margin: auto;
-    width: 700px;
+    border-style: groove;
+    max-width: 480px;
+    max-height: 720px;
     background-color:aqua ;
     background-image:url('aquariohome.jpg');
-    background-position: initial;
+    background-repeat:round;
     display: flex;
     flex-direction: column;
     align-items:center;
-    gap:5px
 }
 
-form{
-    margin:5px 70px;
-    font-size: 25px;
-    text-shadow: #000000;
-    color: aqua;
-    background-color: #10367e;
+.inicio-jogo {
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    justify-content;
+    position: absolute;
+    margin: 30px;
+    padding: 35px;
+    border: 7px solid rgb(128, 98, 0);
     border-radius: 35px;
+    border-style: groove;
+    width: 480px;
+    min-height: 720px;
+    background-color:aqua ;
+    background-image:url('cavinicio.jpg');
+    background-repeat:round;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
 }
 
-input[type="radio"]{
-   margin: 0 15px;
+.titulo{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-button{
-    margin: 0 75px;
-    width: 150px;
-    height: 150px;;
+
+.title {
+    padding: 15px;
+    background-image: linear-gradient(to bottom, rgb(75, 162, 189),white, yellow);
+    border: 6px solid #d8d531;
+    border-radius:45px;
+    color: rgb(179, 140, 57);
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+    font-stretch: expanded;
+    font-family:Helvetica, sans-serif;
+}
+
+h6{
+    color:rgb(255, 242, 240)
+}
+.comecar{
+    position: relative;
+    top: 305px;    
+}
+
+.sumirTela {
+    display:none;
+}
+
+.fim-jogo {
+    position: absolute;
+    margin: 10px;
+    padding: 35px;
+    border: 7px solid rgb(128, 98, 0);
+    border-radius: 35px;
+    border-style: groove;
+    width: 380px;
+    min-height: 680px;
+    background-color:aqua ;
+    background-image:url('aquariohome.jpg');
+    background-repeat:round;
+}
+
+.btn1, .btn, .comecar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 2px none rgb(115, 128, 0);
+    border-radius: 50%;
+    background-color: goldenrod;
+    cursor: pointer;
+    transition: .3s; 
+    color:antiquewhite;
+    text-transform: uppercase;
+    text-shadow: #000000;
+    text-decoration: double;
+    text-decoration-color: #d8d531;
+}
+
+.btn1:hover, .btn:hover, .comecar:hover{
+    background-color: rgb(179, 194, 41);
+    box-shadow: -5px -5px 15px 5px rgba(255, 252, 0, 1), 5px 5px 15px 7px rgba(173, 213, 0, 0.8);
+}
+.btn1:focus, .btn:focus, .comecar:focus{
+    background-color: rgb(250, 227, 24);
+    box-shadow: -5px -5px 15px 5px rgba(255, 252, 0, 1), 5px 5px 15px 7px rgba(196, 233, 34, 0.8);
+      
 }
 
 #botao-jogo{
@@ -57,22 +138,103 @@ button{
     align-items: center;
     justify-content: center;
 }
+
+.botoes-escolha{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+p{
+    display: flex;
+    gap: 25px;
+    font-size: 18px;
+}
 #personagens{
+    display: flex;
+    justify-content: sp;
+    align-items: center;
     
+}
+.efeitodano{
+    position: relative;
+}
+.danogelo{
+  display:none;
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  left: 50%;
+
+}
+/*Animando com css*/
+#camus{
+    background-image: url("rosas.gif");
+    justify-content: space-between;
+    width: 200px;
+    animation-name:mover; /*Nome da animação*/
+    animation-duration: 0.2s; /*Tempo da animação*/
+    animation-timing-function:linear; /*define a aceleração da animação*/
+    animation-iteration-count:infinite; /*duracao da animação*/
+    animation-direction:alternate; /*direçao da animação*/
+    animation-play-state: paused;
 }
 
 #camus, #afrodite{
-    position: relative;
-    justify-content: space-between;
-    width: 250px;
+    border-style: groove;
+    border-color: darkorange;
+    transition: .3s;
 }
+
+@keyframes mover {
+    from {
+        left: 0px;
+    }
+    to {
+        left:-35px;
+    }
+}
+
+.efeitodano{
+    position: relative;
+}
+.danorosa{
+  display: none;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  left: 2%;
+
+}
+#afrodite{
+    
+    justify-content: space-between;
+    width: 200px;
+    animation-name:mover2; /*Nome da animação*/
+    animation-duration: 0.2s; /*Tempo da animação*/
+    animation-timing-function:ease-out; /*define a aceleração da animação*/
+    animation-iteration-count:infinite; /*duracao da animação*/
+    animation-direction:alternate-reverse; /*direçao da animação*/
+    animation-play-state: paused;
+}
+
+@keyframes mover2 {
+    from {
+        left: 0px;
+    }
+    to {
+        left:35px;
+    }
+}
+
+
 
 #camus, #afrodite::before{
     content:"";
     background-color: rgb(0,0,0,0.3);
 }
 .escolha {
-    width: 70px;
+    width: 70%;
     margin: 0 50px;
 }
 .escolhas {
@@ -82,31 +244,42 @@ button{
 #game {
     margin: 10px;
     padding: 15px;
+    width: 400px;
 }
+
 
 #computador{
     display: flex;
+    width: 100%;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 35px;
 }
+
+#display{
+    display: flex;
+    width: 100%;
+    height: 125px;
+    justify-content: space-around;
+    border: 7px groove;
+    box-shadow: -5px -5px 15px 5px rgba(255, 252, 0, 1), 5px 5px 15px 7px rgba(173, 213, 0, 0.8);
+    margin: 12px;
+    background-image: url(./img/galaxia.gif);
+    background-position: center;
+    border-radius: 10px;
+}
+
 #placar {
+    display: none;
     background-color: beige;
     width: 150px;
     font-size: large;
     color: blue  ;
-    font-weight: 700;
-    
+    font-weight: 700;   
 }
-
-.btn {
-    width: 200px;
-    height: 35px;
-    font-size: 15px;
-    border-radius: 7%;
-    background-color: #10367e;
-    margin: 10px;
-    color: antiquewhite;
+#duvida{
+    transform: scalex(-1);
 }
 
 #barralife{
@@ -117,5 +290,18 @@ button{
 .hpt-1,.hpt-2{
     width: 200px;
     height: 20px;
-    background: linear-gradient(to right, green 0%, green 100%, red 10%)
+    transition:.3s;
+    background: linear-gradient(to right, rgb(212, 224, 34) 0%, rgb(233, 248, 14) 100%, red 10%); 
+    border: 3px groove ;  
+}
+
+.select-image{
+    width: 50%;
+    min-height: 80px;
+    text-align: center;
+    gap: 5px;
+}
+
+.select-image div img {
+    max-width: 100%;
 }
